@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#topo {
+    scroll-margin-top: 120px;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: #003223;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+}
+
+/* LINKS */
+.links {
+    display: flex;
+    gap: 40px;
+}
+
+.links a {
+    color: #A7E567;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+/* Efeito underline */
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #A7E567;
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO */
+.cadastrar {
+    width: 130px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #8CC74F;
+    color: #003223;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.cadastrar:hover {
+    transform: scale(1.05);
+    background-color: #a4e35c;
+}
+
+.entrar {
+    width: 130px;
+    height: 35px;
+    border-radius: 20px;
+    transition: 0.3s;
+    margin: 10px;
+    color: #a4e35c;
+    background-color: #003223;
+    border: solid 2px #a4e35c;
+}
+
+.slogan {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 40px;
+}
+
+.container-slogan {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #eaf7ec 0%, #ffffff 50%, #ffe0c2 100%);
+    padding-left: 200px;
+}
+
+.texto-slogan {
+    margin-top: 200px;
+    height: auto;
+    width: 600px;
+}
+
+.texto-slogan h1 {
+    color: #0B4025;
+    font-size: 60px;
+}
+
+.texto-slogan h2 {
+    color: #FE6E04;
+    font-size: 60px;
+}
+
+.texto-slogan p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.imagem-slogan {
+    width: 900px;
+    height: 600px;
+    margin-top: 90px;
+    margin: 1;
+}
+
+.como-funciona {
+    margin: 20px;
+    text-align: center;
+}
+
+.como-funciona h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2E5447;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boxs {
+    width: 350px;
+    height: 120px;
+    background-color: #F1F0F0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.texto-icon {
+    margin: 20px;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .container-slogan {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .texto-slogan {
+        width: 100%;
+        margin-top: 120px;
+        text-align: center;
+    }
+
+    .imagem-slogan {
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .slogan {
+        margin-left: 0;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .container-slogan {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .texto-slogan {
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .texto-slogan h1,
+    .texto-slogan h2 {
+        font-size: 32px;
+    }
+
+    .texto-slogan p {
+        font-size: 16px;
+    }
+
+    .imagem-slogan {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .boxs {
+        width: 90%;
+    }
+}
+
+/* Celular pequeno */
+@media (max-width: 480px) {
+
+    .cadastrar,
+    .entrar {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
